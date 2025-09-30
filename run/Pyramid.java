@@ -1,5 +1,5 @@
 //write a program that reads in a number n in command line and then creates a horrizontal pyramid of height N using *
-public class Main {
+public class Pyramid {
 	public static void main(String[] args) {
 		int n = Integer.parseInt(args[0]);
 		for (int i = 1; i <= n; i++) {
