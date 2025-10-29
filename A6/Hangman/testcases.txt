@@ -1,0 +1,437 @@
+The expected output of the first 5 cases are shown here. The word to guess, letterboard,
+and list of guesses is displayed in every test 1a.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test 1a - boolean checkLetter([_, _, _, _, _],array,tezzarny): 
+
+for guess t:
+false
+[_, _, _, _, _]
+
+for guess e:
+false
+[_, _, _, _, _]
+
+for guess z:
+false
+[_, _, _, _, _]
+
+for guess z:
+false
+[_, _, _, _, _]
+
+for guess a:
+true
+[a, _, _, a, _]
+
+for guess r:
+true
+[a, r, r, a, _]
+
+for guess n:
+false
+[a, r, r, a, _]
+
+for guess y:
+true
+[a, r, r, a, y]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 1b - boolean markGuessed(boolean[] guessedLetters, tezzarny):
+
+for guess t:
+[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false]
+
+for guess e:
+[false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false]
+
+for guess z:
+[false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, true]
+
+for guess z:
+[false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, true]
+
+for guess a:
+[true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, true]
+
+for guess r:
+[true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, true]
+
+for guess n:
+[true, false, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false, true, false, true, false, false, false, false, false, true]
+
+for guess y:
+[true, false, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false, true, false, true, false, false, false, false, true, true]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 1c - boolean checkWin(char[] userLetters):
+for letterboard: _ _ _ _ _
+false
+
+for letterboard _ _ _ _ _:
+false
+
+for letterboard _ _ _ _ _:
+false
+
+for letterboard _ _ _ _ _:
+false
+
+for letterboard a _ _ a _:
+false
+
+for letterboard arra_:
+false
+
+for letterboard: a r r a _
+false
+
+for letterboard: a r r a y
+true
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test 1d - void exportStats([a, r, r, a, y],array,8,5): 
+expects this print :
+you won points: 37 the word was: array total guesses: 8 incorrect guesses: 5   
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test 2a - boolean checkLetter([_, _, _, _],arraystar,tars): 
+
+for guess t:
+true
+[_, t, _, _]
+
+for guess a:
+true
+[_, t, a, _]
+
+for guess r:
+true
+[_, t, a, r]
+
+for guess s:
+true
+[s, t, a, r]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 2b - boolean markGuessed(boolean[] guessedLetters, tars):
+
+for guess t:
+[false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false]
+
+for guess a:
+[true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false, false]
+
+for guess r:
+[true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, true, false, false, false, false, false, false]
+
+for guess s:
+[true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true, true, false, false, false, false, false, false]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 2c - boolean checkWin(char[] userLetters):
+for letterboard: _ t _ _
+false
+
+for letterboard: _ t a _
+false
+
+for letterboard: _ t a r
+false
+
+for letterboard: s t a r
+true
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 2d - void exportStats([s, t, a, r],arraystar,12,5): 
+expects this print :
+you won points: 58 the word was: star total guesses: 12 incorrect guesses: 5
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 3a - boolean checkLetter([_, _, _, _],arraystargold,deaiulft): 
+
+for guess d:
+true
+[_, _, _, d]
+
+for guess e:
+false
+[_, _, _, d]
+
+for guess a:
+false
+[_, _, _, d]
+
+for guess i:
+false
+[_, _, _, d]
+
+for guess u:
+false
+[_, _, _, d]
+
+for guess l:
+true
+[_, _, l, d]
+
+for guess f:
+false
+[_, _, l, d]
+
+for guess t:
+false
+[_, _, l, d]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 3b - boolean markGuessed(boolean[] guessedLetters, deaiulft):
+
+for guess d:
+[false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess e:
+[false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess a:
+[true, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess i:
+[true, false, false, true, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess u:
+[true, false, false, true, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, false, false, false, false, false]
+
+for guess l:
+[true, false, false, true, true, false, false, false, true, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false, false, false]
+
+for guess f:
+[true, false, false, true, true, true, false, false, true, false, false, true, false, false, false, false, false, false, false, false, true, false, false, false, false, false]
+
+for guess t:
+[true, false, false, true, true, true, false, false, true, false, false, true, false, false, false, false, false, false, false, true, true, false, false, false, false, false]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 3c - boolean checkWin(char[] userLetters):
+for letterboard: _ _ _ d
+false
+
+for letterboard: _ _ _ d
+false
+
+for letterboard: _ _ _ d
+false
+
+for letterboard: _ _ _ d
+false
+
+for letterboard: _ _ _ d
+false
+
+for letterboard: _ _ l d
+false
+
+for letterboard: _ _ l d
+false
+
+for letterboard: _ _ l d
+false
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 3d - void exportStats([_, _, l, d],arraystargold,20,9): 
+expects this print :
+you lost points: 0 the word was: gold total guesses: 20 incorrect guesses: 9
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 4a - boolean checkLetter([_, _, _, _, _],arraystargoldember,eeafmbr):     
+
+for guess e:
+true
+[e, _, _, e, _]
+
+for guess e:
+true
+[e, _, _, e, _]
+
+for guess a:
+false
+[e, _, _, e, _]
+
+for guess f:
+false
+[e, _, _, e, _]
+
+for guess m:
+true
+[e, m, _, e, _]
+
+for guess b:
+true
+[e, m, b, e, _]
+
+for guess r:
+true
+[e, m, b, e, r]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 4b - boolean markGuessed(boolean[] guessedLetters, eeafmbr):
+
+for guess e:
+[false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess e:
+[false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess a:
+[true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess f:
+[true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess m:
+[true, false, false, false, true, true, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess b:
+[true, true, false, false, true, true, false, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess r:
+[true, true, false, false, true, true, false, false, false, false, false, false, true, false, false, false, false, true, false, false, false, false, false, false, false, false]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 4c - boolean checkWin(char[] userLetters):
+for letterboard: e _ _ e _
+false
+
+for letterboard: e _ _ e _
+false
+
+for letterboard: e _ _ e _
+false
+
+for letterboard: e _ _ e _
+false
+
+for letterboard: e m _ e _
+false
+
+for letterboard: e m b e _
+false
+
+for letterboard: e m b e r
+true
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 4d - void exportStats([e, m, b, e, r],arraystargoldember,27,10): 
+expects this print :
+you won points: 62 the word was: ember total guesses: 27 incorrect guesses: 10
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 5a - boolean checkLetter([_, _, _, _, _, _, _, _],arraystargoldemberprophecy,abddyegczm): 
+
+for guess a:
+false
+[_, _, _, _, _, _, _, _]
+
+for guess b:
+false
+[_, _, _, _, _, _, _, _]
+
+for guess d:
+false
+[_, _, _, _, _, _, _, _]
+
+for guess d:
+false
+[_, _, _, _, _, _, _, _]
+
+for guess y:
+true
+[_, _, _, _, _, _, _, y]
+
+for guess e:
+true
+[_, _, _, _, _, e, _, y]
+
+for guess g:
+false
+[_, _, _, _, _, e, _, y]
+
+for guess c:
+true
+[_, _, _, _, _, e, c, y]
+
+for guess z:
+false
+[_, _, _, _, _, e, c, y]
+
+for guess m:
+false
+[_, _, _, _, _, e, c, y]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 5b - boolean markGuessed(boolean[] guessedLetters, abddyegczm):
+
+for guess a:
+[true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess b:
+[true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess d:
+[true, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess d:
+[true, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+
+for guess y:
+[true, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false]
+
+for guess e:
+[true, true, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false]
+
+for guess g:
+[true, true, false, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false]
+
+for guess c:
+[true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false]
+
+for guess z:
+[true, true, true, true, true, false, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, true]
+
+for guess m:
+[true, true, true, true, true, false, true, false, false, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false, true, true]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 5c - boolean checkWin(char[] userLetters):
+for letterboard: _ _ _ _ _ _ _ _
+false
+
+for letterboard: _ _ _ _ _ _ _ _
+false
+
+for letterboard: _ _ _ _ _ _ _ _
+false
+
+for letterboard: _ _ _ _ _ _ _ _
+false
+
+for letterboard: _ _ _ _ _ _ _ y
+false
+
+for letterboard: _ _ _ _ _ e _ y
+false
+
+for letterboard: _ _ _ _ _ e _ y
+false
+
+for letterboard: _ _ _ _ _ e c y
+false
+
+for letterboard: _ _ _ _ _ e c y
+false
+
+for letterboard: _ _ _ _ _ e c y
+false
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Test 5d - void exportStats([_, _, _, _, _, e, c, y],arraystargoldemberprophecy,37,11): 
+expects this print :
+you lost points: 0 the word was: prophecy total guesses: 37 incorrect guesses: 11
