@@ -1,0 +1,5 @@
+4
+N N W G
+W F G N
+N N F W
+G W N N

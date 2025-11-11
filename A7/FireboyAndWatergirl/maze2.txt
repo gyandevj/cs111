@@ -1,0 +1,11 @@
+10
+N W W G W N N N N N
+F G W G W F G G G N
+F G W W W F G W W N
+F F F F F F G W G F
+G G W W W G G W G F
+W W W G W W W W G F
+W G G F F F F F F F
+W W N F G N N N G G
+G G N G N N G N F F
+G G N N N G G W W N
